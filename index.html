@@ -1,13 +1,16 @@
 <html>
 <head>
 	<title>CSS Framework Starter Sample</title>
-	
+<div class="container">
 </head>
-<body class="dark">
+<body class="light">
+	<link rel="stylesheet" href="style.css">
+	<script src="javascript.js"></script>
+	<script src="./js/myscript.js"></script>
 	
-	<div class="navbar">
+	<div class="navbar-center">
 		<ul>
-			<li><h1 class="title">Framework Name</h1></li>
+			<li><h1 class="title">DandelionCSS</h1></li>
 			<li><a href="#colors">Colors</a></li>
 			<li><a href="#navbar">Navbar</a></li>
 			<li><a href="#headings">Headings</a></li>
@@ -16,12 +19,12 @@
 			<li><a href="#footer">Footer</a></li>
 		</ul>
 		<ul>
-			<li><a href="link/to/your/framework/repo">GitHub</a></li>
+			
 		</ul>
 	</div>
 
   <div class="container">
-
+	<li><a href="link/to/your/framework/repo">GitHub</a></li>
 		<section id="headings">
 			<h1>Headings</h1>
 			<h1>H1 Heading</h1>
@@ -66,7 +69,7 @@
 			<p>This is your average button. You might want to click it.</p>
 			
 			<p><button>Submit</button></p>
-
+			
 			<pre>
 				<code>
 &lt;button&gt;Submit&lt;/button&gt;
@@ -74,29 +77,31 @@
 			</pre>
 
 			<p>This button has consequences. You might want to think twice before clicking.</p>
-			<p>Custimize buttons by adding CSS variables inline or with a class.</p>
-			<p>
-<button 
-	style="--weight: bold; --background-color: #f85353;"
->Delete</button>
-	<button 
-	style="--background-color: #6bc253;"
->Go!</button>
-			</p>
-
-			<pre>
-				<code>
-&lt;button 
-	style=&quot;--weight: bold; 
-	--background-color: #f85353;&quot;
-&gt;Delete&lt;/button&gt;
-
-&lt;button 
-	style=&quot;--background-color: #6bc253;&quot;
-&gt;Go!&lt;/button&gt;
-				</code>
-			</pre>
+			<button class="warning">Warning</button>
+			<button class="danger">Danger</button>
+			
+			<p>More buttons for your uses!</p>
+			<button class="primary">Primary</button>
+			<button class="secondary">Secondary</button>
+			<button class="success">Success</button>
+			<button class="info">Info</button>
+			<button class="light">Light</button>
+			<button class="dark">Dark</button>
 		</section>
+		<pre>
+			<code>
+				&lt;button class=&quot;warning&quot;&gt;Warning&lt;/button&gt;
+				&lt;button class=&quot;danger&quot;&gt;Danger&lt;/button&gt;
+				---------------------
+				&lt;button class=&quot;primary&quot;&gt;Primary&lt;/button&gt;
+				&lt;button class=&quot;secondary&quot;&gt;Secondary&lt;/button&gt;
+				&lt;button class=&quot;sucess&quot;&gt;Success&lt;/button&gt;
+				&lt;button class=&quot;info&quot;&gt;Info&lt;/button&gt;
+				&lt;button class=&quot;light&quot;&gt;Light&lt;/button&gt;
+				&lt;button class=&quot;dark&quot;&gt;Dark&lt;/button&gt;
+
+			</code>
+		</pre>
 		
 		<section>
 			<h2>Links</h2>
@@ -107,25 +112,53 @@
 			<h2>Forms and controls</h2>
 			<form>
 				<label>
-					<span>Text:</span>
+					<h5>Text:</h5>
 					<input type="text" placeholder="What is your name?">
 				</label>
 
 				<label>
-					<span>Email:</span>
-					<input type="email" placeholder="What is your name?">
+					<h5>Email:</h5>
+					<input type="email" placeholder="What is your e-mail?">
 				</label>
 
 				<label>
-					<span>Password:</span>
-					<input type="password" placeholder="What is your name?">
+					<h5>Password:</h5>
+					<input type="password" placeholder="Insert password">
 				</label>
 
 				<label>
-					<span>Your comments</span>
+					<h5>Your comments</h5>
 					<textarea placeholder="Your comment"></textarea>
 				</label>
+			</section>
+			<pre>
+				<code>
+					&lt;form&gt;
+					&lt;label&gt;
+					&lt;h5&gt;Text&lt;/h5&gt;
+					&lt;input type=&quot;text&quot; placeholder=&quot;What is your name?&quot;
+					&lt;/label&gt;
 
+					&lt;label&gt;
+					&lt;h5&gt;Email&lt;/h5&gt;
+					&lt;input type=&quot;email&quot; placeholder=&quot;What is your e-mail?&quot;
+					&lt;/label&gt;
+
+					&lt;label&gt;
+					&lt;h5&gt;Password&lt;/h5&gt;
+					&lt;input type=&quot;password&quot; placeholder=&quot;Insert password&quot;
+					&lt;/label&gt;
+
+					&lt;label&gt;
+					&lt;h5&gt;Your comments&lt;/h5&gt;
+					&lt;input type=&quot;password&quot; placeholder=&quot;Your comment&quot;
+					&lt;/label&gt;
+				</code>
+			</pre>
+	
+
+
+			<section>
 				<!-- Switch with Click -->
 				<div>
 					<label id="switch-2" class="switch-2">
@@ -146,7 +179,8 @@
 
 
 
-		<section id="colors">
+
+		<!-- <section id="colors">
 			<h1>Colors</h1>
 			<div class="color-grid">
 				
@@ -171,37 +205,33 @@
 				<div style="background-color: var(--color-callout)">--color-callout</div>
 				<div style="background-color: var(--color-lightest)">--color-lightest</div>
 			</div>
-		</section>
+		</section> -->
+		
 		
 		<section id="navbar">
-			<h1>Navbar</h1>
 			
-			<h2>Navbar 1</h2>
+			<h2>Navbar</h2>
 			<p>A navbar with all elements on the left.</p>
-			<p>Use a single child under <code>div.navbar</code>.</p>
+			</section>
 
-			<div class="navbar">
-				<ul>
-					<li><h1 class="title">TITLE</h1></li>
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
-					<li><a href="#">Link 4</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<pre class="code-block">
-					<code>
-&lt;div class=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
+			  
+	<div class="navbar-left">
+	<a href="#">TITLE</a>
+	  <a href="#">Link 1</a>
+	  <a href="#">Link 2</a>
+	  <a href="#">Link 3</a>
+	  <a href="#">Link 4</a>
+	</div>
+		
+	<pre>
+		<code>
+			&lt;div class=&quot;navbar-left&quot;&gt;
+			&lt;a href=&quot;#&quot;&lt;TITLE&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 1&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 2&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 3&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 4&gt;
+			&lt;/div&gt;
 					</code>
 				</pre>
 			</div>
@@ -210,70 +240,53 @@
 
 			
 			<h2>Navbar 2</h2>
-			<p>A navbar with groups of elements on the left and the right.</p>
-			<p>Use two children under <code>div.navbar</code>.</p>
-			<div class="navbar">
-				<ul>
-					<li><h1 class="title">TITLE</h1></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Mission</a></li>
-				</ul>
-				
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+			<p>A navbar with elements to the right.</p>
+			<div class="navbar-right">
+			<a href="#">TITLE</a>
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+				<a href="#">Link 4</a>
 			</div>
 
 			<div>
 				<pre class="code-block">
 					<code>
-&lt;div class=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mission&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
+			&lt;div class=&quot;navbar-right&quot;&gt;
+			&lt;a href=&quot;#&quot;&lt;TITLE&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 1&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 2&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 3&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 4&gt;
+			&lt;/div&gt;
 					</code>
 				</pre>
 			</div>
 			
-			<p>here is an alternative with the site title on the left and links on the right.</p>
+			<p>Here is a navbar with centered elements.</p>
 
-			<div class="navbar">
-				<ul>
+			<div class="navbar-center">
+				<!-- <ul>
 					<li><h1 class="title">TITLE</h1></li>
-				</ul>
-				
-				<ul>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Mission</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+				</ul> -->
+				<a href="#">TITLE</a>
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+				<a href="#">Link 4</a>
 			</div>
 
 			<div>
 					<pre class="code-block">
 						<code>
-&lt;div class=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mission&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
+			&lt;div class=&quot;navbar-center&quot;&gt;
+			&lt;a href=&quot;#&quot;&lt;TITLE&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 1&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 2&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 3&gt;
+			&lt;a href=&quot;#&quot;&lt;Link 4&gt;
+			&lt;/div&gt;
+				
 						</code>
 					</pre>
 				</div>
@@ -282,9 +295,8 @@
 
 			
 			<h2>Navbar 3</h2>
-			<p>With three children the second child will be centered. 
-				This example places the site title in the center.</p>
-			<div class="navbar">
+			<p>This is a navbar with a Title between the links.</p>
+			<div class="navbar-title">
 				<ul>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Mission</a></li>
@@ -303,29 +315,44 @@
 			<div>
 					<pre class="code-block">
 						<code>
-&lt;div class=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mission&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	
-	&lt;ul&gt;
-		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
+							&lt;div class=&quot;navbar-title&quot;&gt;
+							&lt;ul&gt;
+							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;a&gt;&lt;/li&gt;
+							&lt;ul&gt;&lt;a href=&quot;#&quot;>Mission</a></li>
+							&lt;/ul&gt;
+							&lt;ul&gt;
+							&lt;li&gt;&lt;h1 class&quot;#&quot;&gt;Title&lt;a&gt;&lt;/li&gt;
+							&lt;/ul&gt;	
+							&lt;ul&gt;
+							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+							&lt;/div&gt;
+				
 						</code>
 					</pre>
 				</div>
 
 
 		</section>
-		
-		
+		<section id="c">
+		<div class="cards">
+			<div class="card">
+				<img src="dandelion.jpg">
+				<p>This is a card.</p>
+</div>
+
+<pre class="code-block">
+	<code>
+		&lt;div class=&quot;cards&quot;&gt;
+		&lt;div class=&quot;card&quot;&gt;
+		&lt;img src=&quot;example.jpg&quot;&gt;
+		&lt;p&gt;This is a card.&lt;/p&gt;
+		&lt;/div&gt;
+
+
+		</section>
+
 		
 		<section id="footers">
 			<h2>Page Footer</h2>
@@ -357,7 +384,21 @@
 			<h3>Components</h3>
 			<p>Frmwrk CSS also includes some slideshow components. To use these include 
 				the JS files at the bottom of the body and use the markup as shown.</p>
+				<my-counter id="counter" count="20"></my-counter>
+				<button onClick="reset()">Reset Value</button> 	
+				
+			</section>
 
+			<script>
+			function reset() {
+    		let counter = document.querySelector('#counter');
+   			counter.setAttribute("count", 0)
+    		}
+			</script>
+
+
+	
+<!-- 
 				<pre><code>
 ... code sample needed ...
 				</code></pre>
@@ -559,5 +600,7 @@
 
 	<script src="./js/frmwrk-slides.js"></script>
 	<script src="./js/frmwrk-slides-2.js"></script>
+</div> -->
 </body>
 </html>
+</div>
